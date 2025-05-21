@@ -326,9 +326,11 @@ const Dashboard = () => {
     setEditModalOpen(false);
   };
 
-  const filteredTasks = tasks.filter((task) =>
-    task.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredTasks = useMemo(() => {
+    return tasks.filter((task) =>
+      task.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [tasks, searchQuery]);
 
   return (
     <PageWrapper>
@@ -398,7 +400,7 @@ const Dashboard = () => {
         <TaskListSection empty={tasks.length === 0 && !isLoading}>
           {isLoading ? (
             <Skeleton count={5} height={50} style={{ marginBottom: 8 }} />
-          ) : (
+          ) : filteredTasks.length > 0 ? (
             filteredTasks.map((task) => (
               <TaskItem key={task.id}>
                 <TaskInfo>
@@ -442,6 +444,8 @@ const Dashboard = () => {
                 </TaskActions>
               </TaskItem>
             ))
+          ) : (
+            <p>Sorry, no results found</p>
           )}
         </TaskListSection>
       </PageContent>
