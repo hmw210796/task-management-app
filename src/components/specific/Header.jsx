@@ -60,7 +60,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <HeaderContent>
-        <HeaderImage src="/src/assets/images/donn-gabriel-baleva.png" />
+        <HeaderImage src="/images/donn-gabriel-baleva.png" />
         <TitleName>{name}</TitleName>
         <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
       </HeaderContent>

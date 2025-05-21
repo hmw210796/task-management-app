@@ -245,7 +245,7 @@ const SearchInput = (props) => (
   <InputWrapper>
     <IconWrapper>
       <img
-        src={"/src/assets/images/icons/icon-search.svg"}
+        src={"/images/icons/icon-search.svg"}
         alt="Search"
         width={16}
         height={16}
@@ -420,7 +420,7 @@ const Dashboard = () => {
                     type="button"
                   >
                     <img
-                      src={"/src/assets/images/icons/icon-pen.svg"}
+                      src={"/images/icons/icon-pen.svg"}
                       alt="Delete"
                       width={18}
                       height={18}
@@ -433,7 +433,7 @@ const Dashboard = () => {
                     type="button"
                   >
                     <img
-                      src={"/src/assets/images/icons/icon-trash.svg"}
+                      src={"/images/icons/icon-trash.svg"}
                       alt="Delete"
                       width={18}
                       height={18}
