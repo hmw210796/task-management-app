@@ -24,7 +24,7 @@ const PageContent = styled.div`
   justify-content: flex-start;
   width: 100%;
   min-height: calc(100vh - 4.5rem - 0.75rem);
-  max-width: 1200px;
+  max-width: 960px;
   margin: auto;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -37,23 +37,25 @@ const PageContent = styled.div`
 const EmptyStateCard = styled(Card)`
   overflow: hidden;
   text-align: center;
-  max-height: 158px;
   width: 100%;
-  height: 100%;
+  height: 158px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     max-width: 304px;
-    align-items: center; /* Center vertically */
-    justify-content: center;
   }
 `;
 
 const EmptyStateTitle = styled(CardTitle)`
-  margin-bottom: 1.25rem;
+  /* margin-bottom: 1.25rem; */
 `;
 
 const EmptyStateButton = styled(Button)`
-  width: 100%;
+  /* width: 100%; */
 `;
 
 const InfoCardsContainer = styled.div`
@@ -459,6 +461,7 @@ const Dashboard = () => {
             value={newTaskTitle}
             onChange={(e) => setNewTaskTitle(e.target.value)}
             required
+            autoFocus
           />
 
           <Button type="submit">+ New Task</Button>
@@ -474,6 +477,7 @@ const Dashboard = () => {
             value={editTaskTitle}
             onChange={(e) => setEditTaskTitle(e.target.value)}
             required
+            autoFocus
           />
 
           <Button type="submit">Confirm edit</Button>

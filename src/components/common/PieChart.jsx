@@ -12,7 +12,7 @@ const PieLabelText = styled.text`
 `;
 
 const PieChart = ({ completed, total }) => {
-  const size = 140; // SVG size
+  const size = 103; // SVG size
   const strokeWidth = 0; // No stroke
   const radius = (size - strokeWidth) / 2;
   const center = size / 2;

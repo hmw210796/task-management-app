@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const CardStyles = styled.div`
   background: #fff;
-  border: 1px solid #e3e4e6;
+  border: none;
   box-shadow: 0px 3px 6px #0000000a;
   padding: 1.5rem;
   font-size: 14px;
@@ -20,11 +20,11 @@ export const CardTitle = styled.p`
   color: #537178;
 `;
 
-const Card = ({ isLoading, children }) => {
-  return isLoading ? (
+const Card = (props) => {
+  return props.isLoading ? (
     <Skeleton count={3} height={50} style={{ marginBottom: 8 }} />
   ) : (
-    <CardStyles>{children}</CardStyles>
+    <CardStyles {...props}>{props.children}</CardStyles>
   );
 };
 
