@@ -32,9 +32,15 @@ npm run dev
 
 ### Login
 
-- Id: free text
-- Name: free text
+- Id: 'free text'
+- Name: 'free text'
 
-## License
+## Deployment
+
+- The app is deployed onto Vercel
+
+```
+https://task-management-app-two-iota.vercel.app/login
+```
 
 This project is licensed under the MIT License.
